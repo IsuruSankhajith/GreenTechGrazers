@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aadl2:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" name="GTGS" publicSection="#//@ownedPublicSection">
+  <ownedPublicSection>
+    <ownedClassifier xsi:type="aadl2:SystemType" name="GreenTechGrazers_System"/>
+    <ownedClassifier xsi:type="aadl2:SystemImplementation" name="GreenTechGrazers_System.with_Devices">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.0"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceType" name="RFIDReader">
+      <ownedComment body="----------------------------------------------------------"/>
+      <ownedComment body="--RFIDReader"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceImplementation" name="RFIDReader.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.2"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceType" name="NippledrinkersWithRFID">
+      <ownedComment body="--NippledrinkersWithRFID "/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceImplementation" name="NippledrinkersWithRFID.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.4"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceType" name="Camera">
+      <ownedComment body="--Camera"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceImplementation" name="Camera.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.6"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceType" name="TemperatureSensor">
+      <ownedComment body="--TemperatureSensor"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceImplementation" name="TemperatureSensor.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.8"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceType" name="GasSensor">
+      <ownedComment body="--GasSensor"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceImplementation" name="GasSensor.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.10"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceType" name="User_Device">
+      <ownedComment body="--User_Device"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceImplementation" name="User_Device.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.12"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceType" name="Gateway">
+      <ownedComment body="--Gateway"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceImplementation" name="Gateway.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.14"/>
+    </ownedClassifier>
+  </ownedPublicSection>
+</aadl2:Package>
