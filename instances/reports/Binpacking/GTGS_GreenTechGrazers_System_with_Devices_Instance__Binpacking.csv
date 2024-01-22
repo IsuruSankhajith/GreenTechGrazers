@@ -1,0 +1,28 @@
+Bind threads to processors Report
+
+Binpacker Analysis Report
+
+Warning! Bus this_bus is missing Transmission Time property. Using default of 1.0E-5
+Warning! Device this_RFIDReader is missing period property. Using default of 1 ns
+Warning! Device this_RFIDTags is missing period property. Using default of 1 ns
+Warning! Device this_nippledrinkersWithRFID is missing period property. Using default of 1 ns
+Warning! Device this_motion_sensor is missing period property. Using default of 1 ns
+Warning! Device this_camera is missing period property. Using default of 1 ns
+Warning! Device this_temperatureSensor is missing period property. Using default of 1 ns
+Warning! Device this_gasSensor is missing period property. Using default of 1 ns
+Warning! Device this_gateway is missing period property. Using default of 1 ns
+Warning! Device this_user_device is missing period property. Using default of 1 ns
+
+Binpacking results: Success
+Processor GreenTechGrazers_System_with_Devices_Instance.this_processor (1000.0 MIPS) Load: 54% Available: 46%
+
+Thread to Processor Bindings
+Thread GreenTechGrazers_System_with_Devices_Instance.this_Controller.this_thread_control ==> Processor GreenTechGrazers_System_with_Devices_Instance.this_processor No CPU capacity
+Thread GreenTechGrazers_System_with_Devices_Instance.this_Controller.this_thread_temperature ==> Processor GreenTechGrazers_System_with_Devices_Instance.this_processor No CPU capacity
+Thread GreenTechGrazers_System_with_Devices_Instance.this_Controller.this_thread_gas ==> Processor GreenTechGrazers_System_with_Devices_Instance.this_processor No CPU capacity
+Thread GreenTechGrazers_System_with_Devices_Instance.this_Controller.this_thread_ProcessVideo ==> Processor GreenTechGrazers_System_with_Devices_Instance.this_processor No CPU capacity
+Thread GreenTechGrazers_System_with_Devices_Instance.this_Controller.this_thread_Tags ==> Processor GreenTechGrazers_System_with_Devices_Instance.this_processor No CPU capacity
+Thread GreenTechGrazers_System_with_Devices_Instance.this_Controller.this_thread_RFIDReader ==> Processor GreenTechGrazers_System_with_Devices_Instance.this_processor No CPU capacity
+Thread GreenTechGrazers_System_with_Devices_Instance.this_Controller.this_thread_motion ==> Processor GreenTechGrazers_System_with_Devices_Instance.this_processor No CPU capacity
+Thread GreenTechGrazers_System_with_Devices_Instance.this_Controller.this_thread_nippledrinkersWithRFID ==> Processor GreenTechGrazers_System_with_Devices_Instance.this_processor No CPU capacity
+Thread GreenTechGrazers_System_with_Devices_Instance.this_Controller.this_thread_user_device ==> Processor GreenTechGrazers_System_with_Devices_Instance.this_processor No CPU capacity

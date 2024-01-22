@@ -3,50 +3,822 @@
   <ownedPublicSection>
     <ownedClassifier xsi:type="aadl2:SystemType" name="GreenTechGrazers_System"/>
     <ownedClassifier xsi:type="aadl2:SystemImplementation" name="GreenTechGrazers_System.with_Devices">
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding">
+        <appliesTo>
+          <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0">
+            <path namedElement="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.0"/>
+          </path>
+        </appliesTo>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:ReferenceValue">
+              <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.0"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding">
+        <appliesTo>
+          <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0">
+            <path namedElement="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.1"/>
+          </path>
+        </appliesTo>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:ReferenceValue">
+              <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.0"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding">
+        <appliesTo>
+          <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0">
+            <path namedElement="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.2"/>
+          </path>
+        </appliesTo>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:ReferenceValue">
+              <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.0"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding">
+        <appliesTo>
+          <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0">
+            <path namedElement="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.3"/>
+          </path>
+        </appliesTo>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:ReferenceValue">
+              <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.0"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding">
+        <appliesTo>
+          <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0">
+            <path namedElement="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.4"/>
+          </path>
+        </appliesTo>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:ReferenceValue">
+              <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.0"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding">
+        <appliesTo>
+          <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0">
+            <path namedElement="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.5"/>
+          </path>
+        </appliesTo>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:ReferenceValue">
+              <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.0"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding">
+        <appliesTo>
+          <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0">
+            <path namedElement="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.6"/>
+          </path>
+        </appliesTo>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:ReferenceValue">
+              <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.0"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding">
+        <appliesTo>
+          <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0">
+            <path namedElement="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.7"/>
+          </path>
+        </appliesTo>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:ReferenceValue">
+              <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.0"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding">
+        <appliesTo>
+          <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0">
+            <path namedElement="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.8"/>
+          </path>
+        </appliesTo>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:ReferenceValue">
+              <path namedElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.0"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
       <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.0"/>
+      <ownedEndToEndFlow name="GreenTechGrazers_System1_flow">
+        <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Latency">
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="700"/>
+              <maximum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="900"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <ownedEndToEndFlowSegment flowElement="#//@ownedPublicSection/@ownedClassifier.35/@ownedFlowSpecification.0" context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.3"/>
+        <ownedEndToEndFlowSegment flowElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.5"/>
+        <ownedEndToEndFlowSegment flowElement="#//@ownedPublicSection/@ownedClassifier.2/@ownedFlowSpecification.0" context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0"/>
+        <ownedEndToEndFlowSegment flowElement="#//@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.12"/>
+        <ownedEndToEndFlowSegment flowElement="#//@ownedPublicSection/@ownedClassifier.43/@ownedFlowSpecification.0" context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.8"/>
+      </ownedEndToEndFlow>
+      <ownedAccessConnection name="bus_RFID_reader">
+        <ownedComment body="-- bus connections"/>
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.29/@ownedBusAccess.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+      </ownedAccessConnection>
+      <ownedAccessConnection name="bus_RFID_tags">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.1" connectionEnd="#//@ownedPublicSection/@ownedClassifier.31/@ownedBusAccess.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+      </ownedAccessConnection>
+      <ownedAccessConnection name="bus_nippledrinkersWithRFID">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.2" connectionEnd="#//@ownedPublicSection/@ownedClassifier.33/@ownedBusAccess.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+      </ownedAccessConnection>
+      <ownedAccessConnection name="bus_motion">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.3" connectionEnd="#//@ownedPublicSection/@ownedClassifier.35/@ownedBusAccess.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+      </ownedAccessConnection>
+      <ownedAccessConnection name="bus_camera">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.4" connectionEnd="#//@ownedPublicSection/@ownedClassifier.36/@ownedBusAccess.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+      </ownedAccessConnection>
+      <ownedAccessConnection name="bus_temperatureSensor">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.5" connectionEnd="#//@ownedPublicSection/@ownedClassifier.38/@ownedBusAccess.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+      </ownedAccessConnection>
+      <ownedAccessConnection name="bus_gasSensor">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.6" connectionEnd="#//@ownedPublicSection/@ownedClassifier.40/@ownedBusAccess.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+      </ownedAccessConnection>
+      <ownedAccessConnection name="bus_gateway">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.7" connectionEnd="#//@ownedPublicSection/@ownedClassifier.42/@ownedBusAccess.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+      </ownedAccessConnection>
+      <ownedAccessConnection name="bus_userdevice">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.8" connectionEnd="#//@ownedPublicSection/@ownedClassifier.43/@ownedBusAccess.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+      </ownedAccessConnection>
+      <ownedAccessConnection name="bus_processor">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.24/@ownedBusAccess.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+      </ownedAccessConnection>
+      <ownedPortConnection name="RFID_reader_conn_out">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.29/@ownedEventPort.0"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="RFID_reader_conn_in">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.29/@ownedDataPort.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="RFID_tags_conn">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.1"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.1" connectionEnd="#//@ownedPublicSection/@ownedClassifier.31/@ownedEventPort.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="nippledrinks_conn_out">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.2" connectionEnd="#//@ownedPublicSection/@ownedClassifier.33/@ownedEventPort.0"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.2"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="nippledrinks_conn_in">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.1"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.2" connectionEnd="#//@ownedPublicSection/@ownedClassifier.33/@ownedDataPort.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="motion_conn">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.3"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.3" connectionEnd="#//@ownedPublicSection/@ownedClassifier.35/@ownedEventPort.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="camera_conn_out">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.4" connectionEnd="#//@ownedPublicSection/@ownedClassifier.36/@ownedEventPort.0"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.4"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="camera_conn_in">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.2"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.4" connectionEnd="#//@ownedPublicSection/@ownedClassifier.36/@ownedDataPort.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="temperature_conn">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.5"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.5" connectionEnd="#//@ownedPublicSection/@ownedClassifier.38/@ownedEventPort.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="gas_conn">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.6"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.6" connectionEnd="#//@ownedPublicSection/@ownedClassifier.40/@ownedEventPort.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="gateway_conn_out">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.7" connectionEnd="#//@ownedPublicSection/@ownedClassifier.42/@ownedEventPort.0"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.7"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="gateway_conn_conn_in">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.3"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.7" connectionEnd="#//@ownedPublicSection/@ownedClassifier.42/@ownedDataPort.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="userdevice_conn_out">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.8" connectionEnd="#//@ownedPublicSection/@ownedClassifier.43/@ownedEventPort.0"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.8"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="user_device_conn_in">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.4"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.8" connectionEnd="#//@ownedPublicSection/@ownedClassifier.43/@ownedDataPort.0"/>
+      </ownedPortConnection>
+      <ownedBusSubcomponent name="this_bus" busSubcomponentType="#//@ownedPublicSection/@ownedClassifier.28"/>
+      <ownedDeviceSubcomponent name="this_RFIDReader" deviceSubcomponentType="#//@ownedPublicSection/@ownedClassifier.29"/>
+      <ownedDeviceSubcomponent name="this_RFIDTags" deviceSubcomponentType="#//@ownedPublicSection/@ownedClassifier.31"/>
+      <ownedDeviceSubcomponent name="this_nippledrinkersWithRFID" deviceSubcomponentType="#//@ownedPublicSection/@ownedClassifier.33"/>
+      <ownedDeviceSubcomponent name="this_motion_sensor" deviceSubcomponentType="#//@ownedPublicSection/@ownedClassifier.35"/>
+      <ownedDeviceSubcomponent name="this_camera" deviceSubcomponentType="#//@ownedPublicSection/@ownedClassifier.36"/>
+      <ownedDeviceSubcomponent name="this_temperatureSensor" deviceSubcomponentType="#//@ownedPublicSection/@ownedClassifier.38"/>
+      <ownedDeviceSubcomponent name="this_gasSensor" deviceSubcomponentType="#//@ownedPublicSection/@ownedClassifier.40"/>
+      <ownedDeviceSubcomponent name="this_gateway" deviceSubcomponentType="#//@ownedPublicSection/@ownedClassifier.42"/>
+      <ownedDeviceSubcomponent name="this_user_device" deviceSubcomponentType="#//@ownedPublicSection/@ownedClassifier.43"/>
+      <ownedProcessSubcomponent name="this_Controller" processSubcomponentType="#//@ownedPublicSection/@ownedClassifier.3"/>
+      <ownedProcessorSubcomponent name="this_processor" processorSubcomponentType="#//@ownedPublicSection/@ownedClassifier.25"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ProcessType" name="Controller">
+      <ownedFlowSpecification name="Controller_path5" kind="path">
+        <outEnd feature="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.8"/>
+        <InEnd feature="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.3"/>
+      </ownedFlowSpecification>
+      <ownedFlowSpecification name="Controller_path6" kind="path">
+        <outEnd feature="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.7"/>
+        <InEnd feature="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.3"/>
+      </ownedFlowSpecification>
+      <ownedDataPort name="RFID_reader_in" in="true"/>
+      <ownedDataPort name="nippledrinks_data_in" in="true"/>
+      <ownedDataPort name="video_from_camera" in="true"/>
+      <ownedDataPort name="Data_transmission_from_devices" in="true"/>
+      <ownedDataPort name="data_of_Farming" in="true"/>
+      <ownedEventPort name="RFID_reader_data_out" out="true"/>
+      <ownedEventPort name="RFID_tags_in" in="true"/>
+      <ownedEventPort name="nippledrinks_data_out" out="true"/>
+      <ownedEventPort name="motion_in" in="true"/>
+      <ownedEventPort name="camera_out" out="true"/>
+      <ownedEventPort name="temperature_in" in="true"/>
+      <ownedEventPort name="gas_in" in="true"/>
+      <ownedEventPort name="gateway_data_out" out="true"/>
+      <ownedEventPort name="user_device_out" out="true"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ProcessImplementation" name="Controller.with_threads">
+      <ownedFlowImplementation kind="path" specification="#//@ownedPublicSection/@ownedClassifier.2/@ownedFlowSpecification.0">
+        <ownedFlowSegment flowElement="#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.6"/>
+        <ownedFlowSegment flowElement="#//@ownedPublicSection/@ownedClassifier.10/@ownedFlowSpecification.0" context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.3"/>
+        <ownedFlowSegment flowElement="#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.7"/>
+        <ownedFlowSegment flowElement="#//@ownedPublicSection/@ownedClassifier.22/@ownedFlowSpecification.0" context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.9"/>
+        <ownedFlowSegment flowElement="#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.15"/>
+        <inEnd feature="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.3"/>
+        <outEnd feature="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.8"/>
+      </ownedFlowImplementation>
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.2"/>
+      <ownedPortConnection name="RFID_reader_control_conn">
+        <destination connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.0"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.9" connectionEnd="#//@ownedPublicSection/@ownedClassifier.22/@ownedEventPort.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="RFID_reader_conn">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.0" connectionEnd="#//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="RFID_tags_thread_conn">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.1" connectionEnd="#//@ownedPublicSection/@ownedClassifier.6/@ownedEventPort.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.1"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="RFID_tags_control_conn">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.9" connectionEnd="#//@ownedPublicSection/@ownedClassifier.22/@ownedEventPort.2"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.1" connectionEnd="#//@ownedPublicSection/@ownedClassifier.6/@ownedEventPort.1"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="RFID_nippledrinkersWithRFID_conn">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.2" connectionEnd="#//@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.1"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="RFID_nippledrinks_control_conn">
+        <destination connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.2"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.9" connectionEnd="#//@ownedPublicSection/@ownedClassifier.22/@ownedEventPort.8"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="motion_thread_conn">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.3" connectionEnd="#//@ownedPublicSection/@ownedClassifier.10/@ownedEventPort.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.3"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="motion_control_conn">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.9" connectionEnd="#//@ownedPublicSection/@ownedClassifier.22/@ownedEventPort.1"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.3" connectionEnd="#//@ownedPublicSection/@ownedClassifier.10/@ownedEventPort.1"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="temperature_thread_conn">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.4" connectionEnd="#//@ownedPublicSection/@ownedClassifier.12/@ownedEventPort.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.5"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="temperature_control_conn">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.9" connectionEnd="#//@ownedPublicSection/@ownedClassifier.22/@ownedEventPort.6"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.4" connectionEnd="#//@ownedPublicSection/@ownedClassifier.12/@ownedEventPort.1"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="gas_thread_conn">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.5" connectionEnd="#//@ownedPublicSection/@ownedClassifier.14/@ownedEventPort.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.6"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="gas_control_conn">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.9" connectionEnd="#//@ownedPublicSection/@ownedClassifier.22/@ownedEventPort.7"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.5" connectionEnd="#//@ownedPublicSection/@ownedClassifier.14/@ownedEventPort.1"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="camera_control_conn">
+        <destination connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.4"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.9" connectionEnd="#//@ownedPublicSection/@ownedClassifier.22/@ownedEventPort.3"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="video_conn">
+        <destination context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.6" connectionEnd="#//@ownedPublicSection/@ownedClassifier.18/@ownedDataPort.0"/>
+        <source connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.2"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="gateway_control_conn">
+        <ownedComment body="--gateway_thread_conn: port Data_transmission_from_devices -> this_thread_gateway.Data_transmission_from_devices; "/>
+        <ownedComment body="--gateway_control_conn: port Data_transmission_from_devices ->this_thread_gateway.Data_transmission_from_devices;"/>
+        <destination connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.7"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.9" connectionEnd="#//@ownedPublicSection/@ownedClassifier.22/@ownedEventPort.4"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="user_device_control_conn">
+        <destination connectionEnd="#//@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.8"/>
+        <source context="#//@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.9" connectionEnd="#//@ownedPublicSection/@ownedClassifier.22/@ownedEventPort.5"/>
+      </ownedPortConnection>
+      <ownedThreadSubcomponent name="this_thread_RFIDReader" threadSubcomponentType="#//@ownedPublicSection/@ownedClassifier.5"/>
+      <ownedThreadSubcomponent name="this_thread_Tags" threadSubcomponentType="#//@ownedPublicSection/@ownedClassifier.7"/>
+      <ownedThreadSubcomponent name="this_thread_nippledrinkersWithRFID" threadSubcomponentType="#//@ownedPublicSection/@ownedClassifier.9"/>
+      <ownedThreadSubcomponent name="this_thread_motion" threadSubcomponentType="#//@ownedPublicSection/@ownedClassifier.11"/>
+      <ownedThreadSubcomponent name="this_thread_temperature" threadSubcomponentType="#//@ownedPublicSection/@ownedClassifier.13"/>
+      <ownedThreadSubcomponent name="this_thread_gas" threadSubcomponentType="#//@ownedPublicSection/@ownedClassifier.15"/>
+      <ownedThreadSubcomponent name="this_thread_ProcessVideo" threadSubcomponentType="#//@ownedPublicSection/@ownedClassifier.19"/>
+      <ownedThreadSubcomponent name="this_thread_gateway" threadSubcomponentType="#//@ownedPublicSection/@ownedClassifier.17"/>
+      <ownedThreadSubcomponent name="this_thread_user_device" threadSubcomponentType="#//@ownedPublicSection/@ownedClassifier.21"/>
+      <ownedThreadSubcomponent name="this_thread_control" threadSubcomponentType="#//@ownedPublicSection/@ownedClassifier.23"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadType" name="ReadRFIDReader">
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue" namedValue="aadl2:EnumerationLiteral ../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="3"/>
+            <maximum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="5"/>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="50"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedDataPort name="RFID_reader_in" in="true"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadImplementation" name="ReadRFIDReader.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.4"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadType" name="ReadTags">
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue" namedValue="aadl2:EnumerationLiteral ../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="3"/>
+            <maximum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="5"/>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="50"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedEventPort name="RFID_tags_in" in="true"/>
+      <ownedEventPort name="RFID_tags_out" out="true"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadImplementation" name="ReadTags.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.6"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadType" name="ReadnippledrinkersWithRFID">
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue" namedValue="aadl2:EnumerationLiteral ../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="3"/>
+            <maximum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="5"/>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="50"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedDataPort name="nippledrinks_data_in" in="true"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadImplementation" name="ReadnippledrinkersWithRFID.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.8"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadType" name="ReadMotion">
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue" namedValue="aadl2:EnumerationLiteral ../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="3"/>
+            <maximum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="5"/>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="50"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedFlowSpecification name="ReadMotion_path1" kind="path">
+        <outEnd feature="#//@ownedPublicSection/@ownedClassifier.10/@ownedEventPort.1"/>
+        <InEnd feature="#//@ownedPublicSection/@ownedClassifier.10/@ownedEventPort.0"/>
+      </ownedFlowSpecification>
+      <ownedEventPort name="motion_in" in="true"/>
+      <ownedEventPort name="motion_out" out="true"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadImplementation" name="ReadMotion.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.10"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadType" name="Readtemperature">
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue" namedValue="aadl2:EnumerationLiteral ../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="3"/>
+            <maximum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="5"/>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="50"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedEventPort name="temperature_in" in="true"/>
+      <ownedEventPort name="temperature_out" out="true"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadImplementation" name="Readtemperature.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.12"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadType" name="Readgas">
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue" namedValue="aadl2:EnumerationLiteral ../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="3"/>
+            <maximum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="5"/>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="50"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedEventPort name="gas_in" in="true"/>
+      <ownedEventPort name="gas_out" out="true"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadImplementation" name="Readgas.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.14"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadType" name="Readgateway">
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue" namedValue="aadl2:EnumerationLiteral ../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="3"/>
+            <maximum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="5"/>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="50"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedDataPort name="Data_transmission_from_devices" in="true"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadImplementation" name="Readgateway.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.16"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadType" name="ProcessVideo">
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue" namedValue="aadl2:EnumerationLiteral ../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="3"/>
+            <maximum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="5"/>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="50"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedDataPort name="video_in" in="true"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadImplementation" name="ProcessVideo.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.18"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadType" name="FarmingData">
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue" namedValue="aadl2:EnumerationLiteral ../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="3"/>
+            <maximum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="5"/>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="50"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedDataPort name="Farming_in" in="true"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadImplementation" name="FarmingData.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.20"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadType" name="ControlRules">
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue" namedValue="aadl2:EnumerationLiteral ../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="3"/>
+            <maximum xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="5"/>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="50"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedFlowSpecification name="ControlRules_path5" kind="path">
+        <outEnd feature="#//@ownedPublicSection/@ownedClassifier.22/@ownedEventPort.5"/>
+        <InEnd feature="#//@ownedPublicSection/@ownedClassifier.22/@ownedEventPort.1"/>
+      </ownedFlowSpecification>
+      <ownedFlowSpecification name="ControlRules_path6" kind="path">
+        <outEnd feature="#//@ownedPublicSection/@ownedClassifier.22/@ownedEventPort.4"/>
+        <InEnd feature="#//@ownedPublicSection/@ownedClassifier.22/@ownedEventPort.1"/>
+      </ownedFlowSpecification>
+      <ownedEventPort name="RFID_reader_data_out" out="true"/>
+      <ownedEventPort name="motion_in" in="true"/>
+      <ownedEventPort name="RFID_tags_in" in="true"/>
+      <ownedEventPort name="camera_out" out="true"/>
+      <ownedEventPort name="gateway_data_out" out="true"/>
+      <ownedEventPort name="user_device_out" out="true"/>
+      <ownedEventPort name="temperature_in" in="true"/>
+      <ownedEventPort name="gas_in" in="true"/>
+      <ownedEventPort name="nippledrinks_data_out" out="true"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadImplementation" name="ControlRules.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.22"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ProcessorType" name="MainProcessor">
+      <ownedBusAccess name="bus_access" kind="requires" busFeatureClassifier="#//@ownedPublicSection/@ownedClassifier.27"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ProcessorImplementation" name="Mainprocessor.impl">
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Preemptive_Scheduler">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation property="../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Scheduler_Quantum">
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" unit="../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3" value="2"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.24"/>
+      <ownedMemorySubcomponent name="this_ram" memorySubcomponentType="#//@ownedPublicSection/@ownedClassifier.26"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:MemoryType" name="Ram"/>
+    <ownedClassifier xsi:type="aadl2:BusType" name="HWConnections"/>
+    <ownedClassifier xsi:type="aadl2:BusImplementation" name="HWConnections.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.27"/>
     </ownedClassifier>
     <ownedClassifier xsi:type="aadl2:DeviceType" name="RFIDReader">
-      <ownedComment body="----------------------------------------------------------"/>
+      <ownedComment body="----"/>
+      <ownedComment body="-------------------------------------------------------------------------------------------"/>
+      <ownedComment body="-- hardware components "/>
+      <ownedComment body="-------------------------------------------------------------------------------------------"/>
       <ownedComment body="--RFIDReader"/>
+      <ownedFlowSpecification name="RFIDReader_Sink" kind="sink">
+        <InEnd feature="#//@ownedPublicSection/@ownedClassifier.29/@ownedEventPort.0"/>
+      </ownedFlowSpecification>
+      <ownedFlowSpecification name="RFIDReader_Source">
+        <outEnd feature="#//@ownedPublicSection/@ownedClassifier.29/@ownedDataPort.0"/>
+      </ownedFlowSpecification>
+      <ownedDataPort name="transmitted_data" out="true"/>
+      <ownedEventPort name="received_Data_Event" in="true"/>
+      <ownedBusAccess name="bus_access" kind="requires" busFeatureClassifier="#//@ownedPublicSection/@ownedClassifier.27"/>
     </ownedClassifier>
     <ownedClassifier xsi:type="aadl2:DeviceImplementation" name="RFIDReader.impl">
-      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.2"/>
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.29"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceType" name="RFIDTags">
+      <ownedComment body="--RFID Tags"/>
+      <ownedFlowSpecification name="RFIDTags_Source">
+        <outEnd feature="#//@ownedPublicSection/@ownedClassifier.31/@ownedEventPort.0"/>
+      </ownedFlowSpecification>
+      <ownedEventPort name="tags_data_detected" out="true"/>
+      <ownedBusAccess name="bus_access" kind="requires" busFeatureClassifier="#//@ownedPublicSection/@ownedClassifier.27"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceImplementation" name="RFIDTags.impl">
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.31"/>
     </ownedClassifier>
     <ownedClassifier xsi:type="aadl2:DeviceType" name="NippledrinkersWithRFID">
       <ownedComment body="--NippledrinkersWithRFID "/>
+      <ownedFlowSpecification name="NippledrinkersWithRFID_Sink" kind="sink">
+        <InEnd feature="#//@ownedPublicSection/@ownedClassifier.33/@ownedEventPort.0"/>
+      </ownedFlowSpecification>
+      <ownedFlowSpecification name="NippledrinkersWithRFID_Source">
+        <outEnd feature="#//@ownedPublicSection/@ownedClassifier.33/@ownedDataPort.0"/>
+      </ownedFlowSpecification>
+      <ownedDataPort name="nippledrinks_data_transmitted_out" out="true"/>
+      <ownedEventPort name="nippledrinks_data_in" in="true"/>
+      <ownedBusAccess name="bus_access" kind="requires" busFeatureClassifier="#//@ownedPublicSection/@ownedClassifier.27"/>
     </ownedClassifier>
     <ownedClassifier xsi:type="aadl2:DeviceImplementation" name="NippledrinkersWithRFID.impl">
-      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.4"/>
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.33"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceType" name="MotionSensor">
+      <ownedComment body="-- Motion Sensor "/>
+      <ownedFlowSpecification name="MotionSensor_Source">
+        <outEnd feature="#//@ownedPublicSection/@ownedClassifier.35/@ownedEventPort.0"/>
+      </ownedFlowSpecification>
+      <ownedEventPort name="motion_detected" out="true"/>
+      <ownedBusAccess name="bus_access" kind="requires" busFeatureClassifier="#//@ownedPublicSection/@ownedClassifier.27"/>
     </ownedClassifier>
     <ownedClassifier xsi:type="aadl2:DeviceType" name="Camera">
       <ownedComment body="--Camera"/>
+      <ownedFlowSpecification name="Camera_Sink" kind="sink">
+        <InEnd feature="#//@ownedPublicSection/@ownedClassifier.36/@ownedEventPort.0"/>
+      </ownedFlowSpecification>
+      <ownedFlowSpecification name="Camera_Source">
+        <outEnd feature="#//@ownedPublicSection/@ownedClassifier.36/@ownedDataPort.0"/>
+      </ownedFlowSpecification>
+      <ownedDataPort name="video_stream" out="true"/>
+      <ownedEventPort name="camera_control" in="true"/>
+      <ownedBusAccess name="bus_access" kind="requires" busFeatureClassifier="#//@ownedPublicSection/@ownedClassifier.27"/>
     </ownedClassifier>
     <ownedClassifier xsi:type="aadl2:DeviceImplementation" name="Camera.impl">
-      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.6"/>
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.36"/>
     </ownedClassifier>
     <ownedClassifier xsi:type="aadl2:DeviceType" name="TemperatureSensor">
       <ownedComment body="--TemperatureSensor"/>
+      <ownedFlowSpecification name="TemperatureSensor_Source">
+        <outEnd feature="#//@ownedPublicSection/@ownedClassifier.38/@ownedEventPort.0"/>
+      </ownedFlowSpecification>
+      <ownedEventPort name="Temperature_detected" out="true"/>
+      <ownedBusAccess name="bus_access" kind="requires" busFeatureClassifier="#//@ownedPublicSection/@ownedClassifier.27"/>
     </ownedClassifier>
     <ownedClassifier xsi:type="aadl2:DeviceImplementation" name="TemperatureSensor.impl">
-      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.8"/>
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.38"/>
     </ownedClassifier>
     <ownedClassifier xsi:type="aadl2:DeviceType" name="GasSensor">
       <ownedComment body="--GasSensor"/>
+      <ownedFlowSpecification name="GasSensor_Source">
+        <outEnd feature="#//@ownedPublicSection/@ownedClassifier.40/@ownedEventPort.0"/>
+      </ownedFlowSpecification>
+      <ownedEventPort name="gas_detected" out="true"/>
+      <ownedBusAccess name="bus_access" kind="requires" busFeatureClassifier="#//@ownedPublicSection/@ownedClassifier.27"/>
     </ownedClassifier>
     <ownedClassifier xsi:type="aadl2:DeviceImplementation" name="GasSensor.impl">
-      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.10"/>
-    </ownedClassifier>
-    <ownedClassifier xsi:type="aadl2:DeviceType" name="User_Device">
-      <ownedComment body="--User_Device"/>
-    </ownedClassifier>
-    <ownedClassifier xsi:type="aadl2:DeviceImplementation" name="User_Device.impl">
-      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.12"/>
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.40"/>
     </ownedClassifier>
     <ownedClassifier xsi:type="aadl2:DeviceType" name="Gateway">
       <ownedComment body="--Gateway"/>
+      <ownedFlowSpecification name="Gateway_Sink" kind="sink">
+        <InEnd feature="#//@ownedPublicSection/@ownedClassifier.42/@ownedEventPort.0"/>
+      </ownedFlowSpecification>
+      <ownedFlowSpecification name="Gateway_Source">
+        <outEnd feature="#//@ownedPublicSection/@ownedClassifier.42/@ownedDataPort.0"/>
+      </ownedFlowSpecification>
+      <ownedDataPort name="outgoing_data_out" out="true"/>
+      <ownedEventPort name="incoming_data_received" in="true"/>
+      <ownedBusAccess name="bus_access" kind="requires" busFeatureClassifier="#//@ownedPublicSection/@ownedClassifier.27"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:DeviceType" name="UserDevice">
+      <ownedComment body="--User_Device"/>
+      <ownedFlowSpecification name="UserDevice_Sink" kind="sink">
+        <InEnd feature="#//@ownedPublicSection/@ownedClassifier.43/@ownedEventPort.0"/>
+      </ownedFlowSpecification>
+      <ownedFlowSpecification name="UserDevice_Source">
+        <outEnd feature="#//@ownedPublicSection/@ownedClassifier.43/@ownedDataPort.0"/>
+      </ownedFlowSpecification>
+      <ownedDataPort name="Farming_data" out="true"/>
+      <ownedEventPort name="user_Device_on_off" in="true"/>
+      <ownedBusAccess name="bus_access" kind="requires" busFeatureClassifier="#//@ownedPublicSection/@ownedClassifier.27"/>
     </ownedClassifier>
     <ownedClassifier xsi:type="aadl2:DeviceImplementation" name="Gateway.impl">
-      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.14"/>
+      <ownedRealization implemented="#//@ownedPublicSection/@ownedClassifier.42"/>
     </ownedClassifier>
   </ownedPublicSection>
 </aadl2:Package>

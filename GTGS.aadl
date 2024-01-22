@@ -12,7 +12,8 @@ public
 			this_camera: device Camera;
 			this_temperatureSensor: device TemperatureSensor;
 			this_gasSensor: device GasSensor;
-			this_gateway: device Gateway; 
+			this_gateway: device Gateway;
+			this_user_device: device UserDevice;  
 			this_Controller: process Controller.with_threads;
 			this_bus: bus HWConnections.impl;
 			this_processor: processor MainProcessor.impl;
@@ -29,7 +30,9 @@ public
 			temperature_conn: port this_temperatureSensor.temperature_detected -> this_controller.temperature_in;
 			gas_conn: port this_gasSensor.gas_detected -> this_controller.gas_in;	
 			gateway_conn_out: port this_Controller.gateway_data_out -> this_gateway.incoming_data_received;
-			gateway_conn_conn_in: port this_gateway.outgoing_data_out -> this_controller.Data_transmission_from_devices;
+			--gateway_conn_conn_in: port this_gateway.outgoing_data_out -> this_controller.Data_transmission_from_devices;
+			userdevice_conn_out: port this_controller.user_device_out -> this_user_device.user_Device_on_off;
+			user_device_conn_in: port this_user_device.Farming_data -> this_controller.data_of_Farming;
 			
 			-- bus connections
 			bus_RFID_reader: bus access this_bus -> this_RFIDReader.bus_access;
@@ -40,9 +43,28 @@ public
 			bus_temperatureSensor: bus access this_bus -> this_temperatureSensor.bus_access;
 			bus_gasSensor: bus access this_bus -> this_gasSensor.bus_access;
 			bus_gateway: bus access this_bus -> this_gateway.bus_access;
+			bus_userdevice: bus access this_bus ->	this_user_device.bus_access;
 			bus_processor: bus access this_bus -> this_processor.bus_access;
-			
-			
+		
+		flows
+			GreenTechGrazers_System1_flow: end to end flow this_motion_sensor.MotionSensor_Source -> motion_conn -> this_controller.Controller_path5 ->userdevice_conn_out  ->this_user_device.UserDevice_Sink  {Latency => 700ms .. 900 ms;};
+			GreenTechGrazers_System2_flow: end to end flow this_motion_sensor.MotionSensor_Source -> motion_conn -> this_controller.Controller_path6 ->gateway_conn_out  ->this_gateway.Gateway_Sink  {Latency => 700ms .. 900 ms;};
+			GreenTechGrazers_System3_flow: end to end flow this_RFIDTags.RFIDTags_Source -> RFID_tags_conn -> this_controller.Controller_path2 ->userdevice_conn_out  ->this_user_device.UserDevice_Sink  {Latency => 700ms .. 900 ms;};
+			GreenTechGrazers_System4_flow: end to end flow this_RFIDTags.RFIDTags_Source -> RFID_tags_conn -> this_controller.Controller_path3 ->gateway_conn_out  ->this_gateway.Gateway_Sink  {Latency => 700ms .. 900 ms;};
+			GreenTechGrazers_System5_flow: end to end flow this_temperatureSensor.TemperatureSensor_Source -> temperature_conn -> this_controller.Controller_path7 ->userdevice_conn_out  ->this_user_device.UserDevice_Sink  {Latency => 700ms .. 900 ms;};
+			GreenTechGrazers_System6_flow: end to end flow this_temperatureSensor.TemperatureSensor_Source -> temperature_conn -> this_controller.Controller_path8 ->gateway_conn_out  ->this_gateway.Gateway_Sink  {Latency => 700ms .. 900 ms;};
+			GreenTechGrazers_System7_flow: end to end flow this_gasSensor.GasSensor_Source -> gas_conn -> this_controller.Controller_path9 ->userdevice_conn_out  ->this_user_device.UserDevice_Sink  {Latency => 700ms .. 900 ms;};
+			GreenTechGrazers_System8_flow: end to end flow this_gasSensor.GasSensor_Source -> gas_conn -> this_controller.Controller_path10 ->gateway_conn_out  ->this_gateway.Gateway_Sink  {Latency => 700ms .. 900 ms;};
+				
+		properties
+			Allowed_Processor_Binding => (reference (this_processor)) applies to this_controller.this_thread_RFIDReader;
+			Allowed_Processor_Binding => (reference (this_processor)) applies to this_controller.this_thread_Tags;
+			Allowed_Processor_Binding => (reference (this_processor)) applies to this_controller.this_thread_nippledrinkersWithRFID;
+			Allowed_Processor_Binding => (reference (this_processor)) applies to this_controller.this_thread_motion;
+			Allowed_Processor_Binding => (reference (this_processor)) applies to this_controller.this_thread_temperature;
+			Allowed_Processor_Binding => (reference (this_processor)) applies to this_controller.this_thread_gas;
+			Allowed_Processor_Binding => (reference (this_processor)) applies to this_controller.this_thread_ProcessVideo;
+					
 	end GreenTechGrazers_System.with_Devices;
 
 	process Controller
@@ -58,7 +80,19 @@ public
 			temperature_in: in event port;
 			gas_in: in event port;
 			gateway_data_out: out event port;
-			Data_transmission_from_devices: in data port;
+			--Data_transmission_from_devices: in data port;
+			data_of_Farming: in data port;
+			user_device_out: out event port;
+		flows 
+			Controller_path2: flow path RFID_tags_in -> user_device_out;
+			Controller_path3: flow path RFID_tags_in -> gateway_data_out;
+			Controller_path5: flow path motion_in -> user_device_out;
+			Controller_path6: flow path motion_in -> gateway_data_out;
+			Controller_path7: flow path temperature_in -> user_device_out;
+			Controller_path8: flow path temperature_in -> gateway_data_out;
+			Controller_path9: flow path gas_in -> user_device_out;
+			Controller_path10: flow path gas_in -> gateway_data_out;
+			
 	end Controller;
 
 	process implementation Controller.with_threads 
@@ -70,24 +104,75 @@ public
 			this_thread_temperature: thread Readtemperature.impl;
 			this_thread_gas: thread Readgas.impl;
 			this_thread_ProcessVideo: thread ProcessVideo.impl;
-			this_thread_ControlRules: thread ControlRules.impl;
+			this_thread_user_device: thread FarmingData.impl;	
+			this_thread_control: thread ControlRules.impl;
 		connections
-			motion_thread_conn: port motion_in -> this_thread_motion.motion_in; 
+			RFID_reader_control_conn: port this_thread_control.RFID_reader_data_out -> RFID_reader_data_out;
+			RFID_reader_conn: port RFID_reader_in ->this_thread_RFIDReader.RFID_reader_in;
+			RFID_tags_thread_conn: port RFID_tags_in -> this_thread_Tags.RFID_tags_in; 
+			RFID_tags_control_conn: port this_thread_Tags.RFID_tags_out -> this_thread_control.RFID_tags_in;
+			RFID_nippledrinkersWithRFID_conn: port nippledrinks_data_in ->this_thread_nippledrinkersWithRFID.nippledrinks_data_in;
+			RFID_nippledrinks_control_conn: port this_thread_control.nippledrinks_data_out -> nippledrinks_data_out;
+			motion_thread_conn: port motion_in -> this_thread_motion.motion_in;
+			motion_control_conn: port this_thread_motion.motion_out -> this_thread_control.motion_in;
+			temperature_thread_conn: port temperature_in -> this_thread_temperature.temperature_in;
+			temperature_control_conn: port this_thread_temperature.temperature_out -> this_thread_control.temperature_in;
+			gas_thread_conn: port gas_in -> this_thread_gas.gas_in;
+			gas_control_conn: port this_thread_gas.gas_out -> this_thread_control.gas_in;
+			camera_control_conn: port this_thread_control.camera_out -> camera_out;
+			video_conn: port video_from_camera -> this_thread_ProcessVideo.video_in;
+			gateway_control_conn: port this_thread_control.gateway_data_out -> gateway_data_out;
+			
+			user_device_conn: port data_of_Farming ->this_thread_user_device.Farming_in;
+			user_device_control_conn: port this_thread_control.user_device_out -> user_device_out;
+		flows
+			Controller_path2 : flow path RFID_tags_in -> RFID_tags_thread_conn -> this_thread_Tags.ReadTags_path1 ->RFID_tags_control_conn ->this_thread_control.ControlRules_path2 ->user_device_control_conn -> user_device_out;
+			Controller_path3 : flow path RFID_tags_in -> RFID_tags_thread_conn -> this_thread_Tags.ReadTags_path1 ->RFID_tags_control_conn ->this_thread_control.ControlRules_path3 ->gateway_control_conn -> gateway_data_out;
+			Controller_path5 : flow path motion_in -> motion_thread_conn -> this_thread_motion.ReadMotion_path1 ->motion_control_conn ->this_thread_control.ControlRules_path5 ->user_device_control_conn -> user_device_out;
+			Controller_path6 : flow path motion_in -> motion_thread_conn -> this_thread_motion.ReadMotion_path1 ->motion_control_conn ->this_thread_control.ControlRules_path6 ->gateway_control_conn -> gateway_data_out;
+			Controller_path7 : flow path temperature_in -> temperature_thread_conn -> this_thread_temperature.ReadTemperature_path1 ->temperature_control_conn ->this_thread_control.ControlRules_path7 ->user_device_control_conn -> user_device_out;
+			Controller_path8 : flow path temperature_in -> temperature_thread_conn -> this_thread_temperature.ReadTemperature_path1 ->temperature_control_conn ->this_thread_control.ControlRules_path8 ->gateway_control_conn -> gateway_data_out;
+			Controller_path9 : flow path gas_in -> gas_thread_conn -> this_thread_gas.ReadGas_path1 ->gas_control_conn ->this_thread_control.ControlRules_path9 ->user_device_control_conn -> user_device_out;
+			Controller_path10 : flow path gas_in -> gas_thread_conn -> this_thread_gas.ReadGas_path1 ->gas_control_conn ->this_thread_control.ControlRules_path10 ->gateway_control_conn -> gateway_data_out;		
 	end Controller.with_threads;
 	
 	thread ReadRFIDReader
+		features
+			RFID_reader_in: in data port;	
+		properties
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 1ms .. 3ms;
+			Period => 50ms;
+			Priority => 2;
 	end ReadRFIDReader;
 	
 	thread implementation ReadRFIDReader.impl
 	end ReadRFIDReader.impl;
 	
 	thread ReadTags
+		features
+			RFID_tags_in: in event port;
+			RFID_tags_out: out event port;
+		flows 
+			ReadTags_path1: flow path RFID_tags_in ->RFID_tags_out;
+		properties
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 1ms .. 3ms;
+			Period => 50ms;
+			Priority => 2;	
 	end ReadTags;
 	
 	thread implementation ReadTags.impl
 	end ReadTags.impl;
 	
 	thread ReadnippledrinkersWithRFID
+		features 
+			nippledrinks_data_in: in data port;
+		properties
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 1ms .. 3ms;
+			Period => 50ms;
+			Priority => 2;
 	end ReadnippledrinkersWithRFID;
 	
 	thread implementation ReadnippledrinkersWithRFID.impl
@@ -96,50 +181,112 @@ public
 	thread ReadMotion
 		features
 			motion_in: in event port;
+			motion_out: out event port;
+		flows 
+			ReadMotion_path1: flow path motion_in ->motion_out;
+		properties
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 1ms .. 3ms;
+			Period => 50ms;
+			Priority => 2;
+			
 	end ReadMotion;
 	
 	thread implementation ReadMotion.impl
 	end ReadMotion.impl;
 	
 	thread Readtemperature
+		features
+			temperature_in: in event port;
+			temperature_out: out event port;
+		flows 
+			ReadTemperature_path1: flow path temperature_in ->temperature_out;
+		properties
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 1ms .. 3ms;
+			Period => 50ms;
+			Priority => 2;
 	end Readtemperature;
 	
 	thread implementation Readtemperature.impl
 	end Readtemperature.impl;
 	
 	thread Readgas
+		features 
+			gas_in: in event port;
+			gas_out: out event port;
+		flows 
+			ReadGas_path1: flow path gas_in ->gas_out;
+		properties
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 1ms .. 3ms;
+			Period => 50ms;
+			Priority => 2;
 	end Readgas;
 	
 	thread implementation Readgas.impl
 	end Readgas.impl;
-	
-		
-	thread Readgateway
-	end Readgateway;
-	
-	thread implementation Readgateway.impl
-	end Readgateway.impl;
-	
+			
 	thread ProcessVideo
+		features
+			video_in: in data port;
+		properties
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 1ms .. 3ms;
+			Period => 50ms;
+			Priority => 2;
 	end ProcessVideo;
 	
 	thread implementation ProcessVideo.impl
 	end ProcessVideo.impl;
 	
+	thread FarmingData
+		features
+			Farming_in: in data port;
+		properties
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 1ms .. 3ms;
+			Period => 50ms;
+			Priority => 2;
+	end FarmingData;
+	
+	thread implementation FarmingData.impl
+	end FarmingData.impl;
+	
 	thread ControlRules
 		features
+			RFID_reader_data_out: out event port;
 			motion_in: in event port;
+			RFID_tags_in: in event port;
+			camera_out: out event port;
+			gateway_data_out: out event port;
+			user_device_out:out event port;
+			temperature_in: in event port;
+			gas_in: in event port;
+			nippledrinks_data_out: out event port;
+		flows
+			ControlRules_path2: flow path RFID_tags_in -> user_device_out;
+			ControlRules_path3: flow path RFID_tags_in-> gateway_data_out;
+			ControlRules_path5: flow path motion_in -> user_device_out;
+			ControlRules_path6: flow path motion_in -> gateway_data_out;
+			ControlRules_path7: flow path temperature_in -> user_device_out;
+			ControlRules_path8: flow path temperature_in -> gateway_data_out;
+			ControlRules_path9: flow path gas_in -> user_device_out;
+			ControlRules_path10: flow path gas_in -> gateway_data_out;	
+		properties
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 1ms .. 3ms;
+			Period => 50ms;
+			Priority => 2;
 	end ControlRules;
 	
 	thread implementation ControlRules.impl
 	end ControlRules.impl;
-	
-	
-	
-	
+		
 	processor MainProcessor
 			features 
 				bus_access: requires bus access HWConnections;
+			
 	end MainProcessor;
 	
 	processor implementation Mainprocessor.impl
@@ -154,14 +301,14 @@ public
 	end Ram;
 	
 	bus HWConnections 
-	end HWConnections;
+	end HWConnections; 
 	
 	bus implementation HWConnections.impl
 	end HWConnections.impl;
 ----
 
 -------------------------------------------------------------------------------------------
--- hardware components 
+-- Device components 
 -------------------------------------------------------------------------------------------
 	--RFIDReader
 	device RFIDReader 
@@ -169,6 +316,9 @@ public
 			received_Data_Event: in event port;
 			transmitted_data : out data port;
 			bus_access: requires bus access HWConnections;
+		flows 
+			RFIDReader_Sink: flow sink received_Data_Event;
+			RFIDReader_Source: flow source transmitted_data;
 	end RFIDReader;
 	
 	device implementation RFIDReader.impl
@@ -177,8 +327,10 @@ public
 	--RFID Tags
 	device RFIDTags
 		features
-		tags_data_detected: out event port; 
-		bus_access: requires bus access HWConnections;
+			tags_data_detected: out event port; 
+			bus_access: requires bus access HWConnections;
+		flows 
+			RFIDTags_Source: flow source tags_data_detected;
 	end RFIDTags;
 	
 	device implementation RFIDTags.impl
@@ -191,6 +343,10 @@ public
 			nippledrinks_data_in :in event port;
 			nippledrinks_data_transmitted_out : out data port;
 			bus_access: requires bus access HWConnections;
+		flows 
+			NippledrinkersWithRFID_Sink: flow sink nippledrinks_data_in;
+			NippledrinkersWithRFID_Source: flow source nippledrinks_data_transmitted_out;
+		
  	end NippledrinkersWithRFID ;
 	
 	device implementation NippledrinkersWithRFID .impl
@@ -201,6 +357,8 @@ public
 		features 
 			motion_detected: out event port;
 			bus_access: requires bus access HWConnections;	
+		flows 
+			MotionSensor_Source: flow source motion_detected;
 	end MotionSensor;
 
 	--Camera
@@ -209,6 +367,9 @@ public
 			camera_control : in event port;
 			video_stream: out data port; 
 			bus_access: requires bus access HWConnections;
+		flows 
+			Camera_Sink: flow sink camera_control;
+			Camera_Source: flow source video_stream;
 	end Camera;
 	
 	device implementation Camera.impl
@@ -219,6 +380,10 @@ public
 		features 
 			Temperature_detected: out event port;
 			bus_access: requires bus access HWConnections;
+			
+		flows 
+			TemperatureSensor_Source: flow source Temperature_detected;
+		
 	end TemperatureSensor;
 	
 	device implementation TemperatureSensor.impl
@@ -229,6 +394,8 @@ public
 		features 
 			gas_detected: out event port;
 			bus_access: requires bus access HWConnections;
+		flows 
+			GasSensor_Source: flow source gas_detected;
 	end GasSensor;
 	
 	device implementation GasSensor.impl
@@ -238,9 +405,25 @@ public
 	device Gateway
 		 features 
 		 	incoming_data_received: in event port;
-		 	outgoing_data_out: out data port;
-		 	bus_access: requires bus access HWConnections; 
+		 	--outgoing_data_out: out data port;
+		 	bus_access: requires bus access HWConnections;
+		 flows 
+			Gateway_Sink: flow sink incoming_data_received;
+			--Gateway_Source: flow source outgoing_data_out;
+		 
 	end Gateway ;
+	
+	--User_Device
+	device UserDevice
+		features 
+			user_Device_on_off: in event port;
+			Farming_data: out data port;
+			bus_access: requires bus access HWConnections;
+		flows 
+			UserDevice_Sink: flow sink user_Device_on_off;
+			UserDevice_Source: flow source Farming_data;
+		
+	end UserDevice;
 	
 	device implementation Gateway .impl
 	end Gateway .impl;

@@ -1,0 +1,1131 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="GreenTechGrazers_System_with_Devices_Instance" category="system">
+  <componentInstance name="this_bus" category="bus">
+    <subcomponent xsi:type="aadl2:BusSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:BusImplementation" href="../GTGS.aadl#GTGS.HWConnections.impl"/>
+  </componentInstance>
+  <componentInstance name="this_RFIDReader" category="device">
+    <featureInstance name="transmitted_data" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.27/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="received_Data_Event" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.27/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.27/@ownedBusAccess.0"/>
+    </featureInstance>
+    <flowSpecification name="RFIDReader_Sink" source="//@componentInstance.1/@featureInstance.1">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.27/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification name="RFIDReader_Source" destination="//@componentInstance.1/@featureInstance.0">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.27/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../GTGS.aadl#GTGS.RFIDReader"/>
+  </componentInstance>
+  <componentInstance name="this_RFIDTags" category="device">
+    <featureInstance name="tags_data_detected" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedBusAccess.0"/>
+    </featureInstance>
+    <flowSpecification name="RFIDTags_Source" destination="//@componentInstance.2/@featureInstance.0">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../GTGS.aadl#GTGS.RFIDTags"/>
+  </componentInstance>
+  <componentInstance name="this_nippledrinkersWithRFID" category="device">
+    <featureInstance name="nippledrinks_data_transmitted_out" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.31/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="nippledrinks_data_in" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.31/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.31/@ownedBusAccess.0"/>
+    </featureInstance>
+    <flowSpecification name="NippledrinkersWithRFID_Sink" source="//@componentInstance.3/@featureInstance.1">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.31/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification name="NippledrinkersWithRFID_Source" destination="//@componentInstance.3/@featureInstance.0">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.31/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.2"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../GTGS.aadl#GTGS.NippledrinkersWithRFID"/>
+  </componentInstance>
+  <componentInstance name="this_motion_sensor" category="device">
+    <featureInstance name="motion_detected" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.33/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.33/@ownedBusAccess.0"/>
+    </featureInstance>
+    <flowSpecification name="MotionSensor_Source" destination="//@componentInstance.4/@featureInstance.0">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.33/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.3"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../GTGS.aadl#GTGS.MotionSensor"/>
+  </componentInstance>
+  <componentInstance name="this_camera" category="device">
+    <featureInstance name="video_stream" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="camera_control" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedBusAccess.0"/>
+    </featureInstance>
+    <flowSpecification name="Camera_Sink" source="//@componentInstance.5/@featureInstance.1">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification name="Camera_Source" destination="//@componentInstance.5/@featureInstance.0">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.4"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../GTGS.aadl#GTGS.Camera"/>
+  </componentInstance>
+  <componentInstance name="this_temperatureSensor" category="device">
+    <featureInstance name="Temperature_detected" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedBusAccess.0"/>
+    </featureInstance>
+    <flowSpecification name="TemperatureSensor_Source" destination="//@componentInstance.6/@featureInstance.0">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.5"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../GTGS.aadl#GTGS.TemperatureSensor"/>
+  </componentInstance>
+  <componentInstance name="this_gasSensor" category="device">
+    <featureInstance name="gas_detected" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedBusAccess.0"/>
+    </featureInstance>
+    <flowSpecification name="GasSensor_Source" destination="//@componentInstance.7/@featureInstance.0">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.6"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../GTGS.aadl#GTGS.GasSensor"/>
+  </componentInstance>
+  <componentInstance name="this_gateway" category="device">
+    <featureInstance name="outgoing_data_out" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="incoming_data_received" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedBusAccess.0"/>
+    </featureInstance>
+    <flowSpecification name="Gateway_Sink" source="//@componentInstance.8/@featureInstance.1">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification name="Gateway_Source" destination="//@componentInstance.8/@featureInstance.0">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.7"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../GTGS.aadl#GTGS.Gateway"/>
+  </componentInstance>
+  <componentInstance name="this_user_device" category="device">
+    <featureInstance name="Farming_data" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="user_Device_on_off" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedBusAccess.0"/>
+    </featureInstance>
+    <flowSpecification name="UserDevice_Sink" source="//@componentInstance.9/@featureInstance.1">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification name="UserDevice_Source" destination="//@componentInstance.9/@featureInstance.0">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.8"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../GTGS.aadl#GTGS.UserDevice"/>
+  </componentInstance>
+  <componentInstance name="this_Controller" category="process">
+    <featureInstance name="RFID_reader_in">
+      <feature xsi:type="aadl2:DataPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="nippledrinks_data_in">
+      <feature xsi:type="aadl2:DataPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="video_from_camera">
+      <feature xsi:type="aadl2:DataPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance name="data_of_Farming">
+      <feature xsi:type="aadl2:DataPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.3"/>
+    </featureInstance>
+    <featureInstance name="RFID_reader_data_out" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="RFID_tags_in" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.1"/>
+    </featureInstance>
+    <featureInstance name="nippledrinks_data_out" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.2"/>
+    </featureInstance>
+    <featureInstance name="motion_in" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.3"/>
+    </featureInstance>
+    <featureInstance name="camera_out" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.4"/>
+    </featureInstance>
+    <featureInstance name="temperature_in" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.5"/>
+    </featureInstance>
+    <featureInstance name="gas_in" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.6"/>
+    </featureInstance>
+    <featureInstance name="gateway_data_out" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.7"/>
+    </featureInstance>
+    <featureInstance name="user_device_out" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventPort.8"/>
+    </featureInstance>
+    <componentInstance name="this_thread_RFIDReader" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.11"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="1">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="3">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="RFID_reader_in">
+        <feature xsi:type="aadl2:DataPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../GTGS.aadl#GTGS.ReadRFIDReader.impl"/>
+    </componentInstance>
+    <componentInstance name="this_thread_Tags" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.11"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="1">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="3">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="RFID_tags_in" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedEventPort.0"/>
+      </featureInstance>
+      <featureInstance name="RFID_tags_out" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedEventPort.1"/>
+      </featureInstance>
+      <flowSpecification name="ReadTags_path1" source="//@componentInstance.10/@componentInstance.1/@featureInstance.0" destination="//@componentInstance.10/@componentInstance.1/@featureInstance.1">
+        <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedFlowSpecification.0"/>
+      </flowSpecification>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../GTGS.aadl#GTGS.ReadTags.impl"/>
+    </componentInstance>
+    <componentInstance name="this_thread_nippledrinkersWithRFID" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.11"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="1">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="3">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="nippledrinks_data_in">
+        <feature xsi:type="aadl2:DataPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.2"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../GTGS.aadl#GTGS.ReadnippledrinkersWithRFID.impl"/>
+    </componentInstance>
+    <componentInstance name="this_thread_motion" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.11"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="1">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="3">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="motion_in" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedEventPort.0"/>
+      </featureInstance>
+      <featureInstance name="motion_out" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedEventPort.1"/>
+      </featureInstance>
+      <flowSpecification name="ReadMotion_path1" source="//@componentInstance.10/@componentInstance.3/@featureInstance.0" destination="//@componentInstance.10/@componentInstance.3/@featureInstance.1">
+        <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedFlowSpecification.0"/>
+      </flowSpecification>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.3"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../GTGS.aadl#GTGS.ReadMotion.impl"/>
+    </componentInstance>
+    <componentInstance name="this_thread_temperature" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.11"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.4"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="1">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="3">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="temperature_in" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedEventPort.0"/>
+      </featureInstance>
+      <featureInstance name="temperature_out" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedEventPort.1"/>
+      </featureInstance>
+      <flowSpecification name="ReadTemperature_path1" source="//@componentInstance.10/@componentInstance.4/@featureInstance.0" destination="//@componentInstance.10/@componentInstance.4/@featureInstance.1">
+        <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedFlowSpecification.0"/>
+      </flowSpecification>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.4"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../GTGS.aadl#GTGS.Readtemperature.impl"/>
+    </componentInstance>
+    <componentInstance name="this_thread_gas" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.11"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.5"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="1">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="3">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="gas_in" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedEventPort.0"/>
+      </featureInstance>
+      <featureInstance name="gas_out" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedEventPort.1"/>
+      </featureInstance>
+      <flowSpecification name="ReadGas_path1" source="//@componentInstance.10/@componentInstance.5/@featureInstance.0" destination="//@componentInstance.10/@componentInstance.5/@featureInstance.1">
+        <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedFlowSpecification.0"/>
+      </flowSpecification>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.5"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../GTGS.aadl#GTGS.Readgas.impl"/>
+    </componentInstance>
+    <componentInstance name="this_thread_ProcessVideo" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.11"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.6"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="1">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="3">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="video_in">
+        <feature xsi:type="aadl2:DataPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.6"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../GTGS.aadl#GTGS.ProcessVideo.impl"/>
+    </componentInstance>
+    <componentInstance name="this_thread_user_device" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="1">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="3">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="Farming_in">
+        <feature xsi:type="aadl2:DataPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.7"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../GTGS.aadl#GTGS.FarmingData.impl"/>
+    </componentInstance>
+    <componentInstance name="this_thread_control" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="1">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="3">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+        </ownedValue>
+        <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="RFID_reader_data_out" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedEventPort.0"/>
+      </featureInstance>
+      <featureInstance name="motion_in" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedEventPort.1"/>
+      </featureInstance>
+      <featureInstance name="RFID_tags_in" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedEventPort.2"/>
+      </featureInstance>
+      <featureInstance name="camera_out" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedEventPort.3"/>
+      </featureInstance>
+      <featureInstance name="gateway_data_out" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedEventPort.4"/>
+      </featureInstance>
+      <featureInstance name="user_device_out" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedEventPort.5"/>
+      </featureInstance>
+      <featureInstance name="temperature_in" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedEventPort.6"/>
+      </featureInstance>
+      <featureInstance name="gas_in" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedEventPort.7"/>
+      </featureInstance>
+      <featureInstance name="nippledrinks_data_out" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedEventPort.8"/>
+      </featureInstance>
+      <flowSpecification name="ControlRules_path2" source="//@componentInstance.10/@componentInstance.8/@featureInstance.2" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.5">
+        <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedFlowSpecification.0"/>
+      </flowSpecification>
+      <flowSpecification name="ControlRules_path3" source="//@componentInstance.10/@componentInstance.8/@featureInstance.2" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.4">
+        <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedFlowSpecification.1"/>
+      </flowSpecification>
+      <flowSpecification name="ControlRules_path5" source="//@componentInstance.10/@componentInstance.8/@featureInstance.1" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.5">
+        <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedFlowSpecification.2"/>
+      </flowSpecification>
+      <flowSpecification name="ControlRules_path6" source="//@componentInstance.10/@componentInstance.8/@featureInstance.1" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.4">
+        <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedFlowSpecification.3"/>
+      </flowSpecification>
+      <flowSpecification name="ControlRules_path7" source="//@componentInstance.10/@componentInstance.8/@featureInstance.6" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.5">
+        <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedFlowSpecification.4"/>
+      </flowSpecification>
+      <flowSpecification name="ControlRules_path8" source="//@componentInstance.10/@componentInstance.8/@featureInstance.6" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.4">
+        <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedFlowSpecification.5"/>
+      </flowSpecification>
+      <flowSpecification name="ControlRules_path9" source="//@componentInstance.10/@componentInstance.8/@featureInstance.7" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.5">
+        <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedFlowSpecification.6"/>
+      </flowSpecification>
+      <flowSpecification name="ControlRules_path10" source="//@componentInstance.10/@componentInstance.8/@featureInstance.7" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.4">
+        <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedFlowSpecification.7"/>
+      </flowSpecification>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.8"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../GTGS.aadl#GTGS.ControlRules.impl"/>
+    </componentInstance>
+    <flowSpecification name="Controller_path2" source="//@componentInstance.10/@featureInstance.5" destination="//@componentInstance.10/@featureInstance.12">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification name="Controller_path3" source="//@componentInstance.10/@featureInstance.5" destination="//@componentInstance.10/@featureInstance.11">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <flowSpecification name="Controller_path5" source="//@componentInstance.10/@featureInstance.7" destination="//@componentInstance.10/@featureInstance.12">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedFlowSpecification.2"/>
+    </flowSpecification>
+    <flowSpecification name="Controller_path6" source="//@componentInstance.10/@featureInstance.7" destination="//@componentInstance.10/@featureInstance.11">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedFlowSpecification.3"/>
+    </flowSpecification>
+    <flowSpecification name="Controller_path7" source="//@componentInstance.10/@featureInstance.9" destination="//@componentInstance.10/@featureInstance.12">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedFlowSpecification.4"/>
+    </flowSpecification>
+    <flowSpecification name="Controller_path8" source="//@componentInstance.10/@featureInstance.9" destination="//@componentInstance.10/@featureInstance.11">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedFlowSpecification.5"/>
+    </flowSpecification>
+    <flowSpecification name="Controller_path9" source="//@componentInstance.10/@featureInstance.10" destination="//@componentInstance.10/@featureInstance.12">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedFlowSpecification.6"/>
+    </flowSpecification>
+    <flowSpecification name="Controller_path10" source="//@componentInstance.10/@featureInstance.10" destination="//@componentInstance.10/@featureInstance.11">
+      <flowSpecification href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedFlowSpecification.7"/>
+    </flowSpecification>
+    <connectionInstance name="this_thread_Tags.RFID_tags_out -> this_thread_control.RFID_tags_in" complete="true" kind="portConnection" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.2" source="//@componentInstance.10/@componentInstance.1/@featureInstance.1">
+      <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@componentInstance.1/@featureInstance.1" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="this_thread_motion.motion_out -> this_thread_control.motion_in" complete="true" kind="portConnection" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.1" source="//@componentInstance.10/@componentInstance.3/@featureInstance.1">
+      <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@componentInstance.3/@featureInstance.1" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.7"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="this_thread_temperature.temperature_out -> this_thread_control.temperature_in" complete="true" kind="portConnection" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.6" source="//@componentInstance.10/@componentInstance.4/@featureInstance.1">
+      <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@componentInstance.4/@featureInstance.1" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.6">
+        <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.9"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="this_thread_gas.gas_out -> this_thread_control.gas_in" complete="true" kind="portConnection" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.7" source="//@componentInstance.10/@componentInstance.5/@featureInstance.1">
+      <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@componentInstance.5/@featureInstance.1" destination="//@componentInstance.10/@componentInstance.8/@featureInstance.7">
+        <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.11"/>
+      </connectionReference>
+    </connectionInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../GTGS.aadl#GTGS.Controller.with_threads"/>
+  </componentInstance>
+  <componentInstance name="this_processor" category="processor">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Preemptive_Scheduler"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+      </ownedValue>
+      <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.23/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Scheduler_Quantum"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+          <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.23/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <featureInstance name="bus_access" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedBusAccess.0"/>
+    </featureInstance>
+    <componentInstance name="this_ram" category="memory">
+      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.23/@ownedMemorySubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:MemoryType" href="../GTGS.aadl#GTGS.Ram"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessorImplementation" href="../GTGS.aadl#GTGS.Mainprocessor.impl"/>
+  </componentInstance>
+  <endToEndFlow name="GreenTechGrazers_System1_flow" flowElement="//@componentInstance.4/@flowSpecification.0 //@connectionInstance.13 //@componentInstance.10/@componentInstance.3/@flowSpecification.0 //@componentInstance.10/@connectionInstance.1 //@componentInstance.10/@componentInstance.8/@flowSpecification.2 //@connectionInstance.21 //@componentInstance.9/@flowSpecification.0">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Latency"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RangeValue">
+          <minimum xsi:type="aadl2:IntegerLiteral" value="700">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </minimum>
+          <maximum xsi:type="aadl2:IntegerLiteral" value="900">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </maximum>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.0/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <endToEndFlow href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.0"/>
+  </endToEndFlow>
+  <endToEndFlow name="GreenTechGrazers_System2_flow" flowElement="//@componentInstance.4/@flowSpecification.0 //@connectionInstance.13 //@componentInstance.10/@componentInstance.3/@flowSpecification.0 //@componentInstance.10/@connectionInstance.1 //@componentInstance.10/@componentInstance.8/@flowSpecification.3 //@connectionInstance.20 //@componentInstance.8/@flowSpecification.0">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Latency"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RangeValue">
+          <minimum xsi:type="aadl2:IntegerLiteral" value="700">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </minimum>
+          <maximum xsi:type="aadl2:IntegerLiteral" value="900">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </maximum>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.1/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <endToEndFlow href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.1"/>
+  </endToEndFlow>
+  <endToEndFlow name="GreenTechGrazers_System3_flow" flowElement="//@componentInstance.2/@flowSpecification.0 //@connectionInstance.11 //@componentInstance.10/@componentInstance.1/@flowSpecification.0 //@componentInstance.10/@connectionInstance.0 //@componentInstance.10/@componentInstance.8/@flowSpecification.0 //@connectionInstance.21 //@componentInstance.9/@flowSpecification.0">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Latency"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RangeValue">
+          <minimum xsi:type="aadl2:IntegerLiteral" value="700">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </minimum>
+          <maximum xsi:type="aadl2:IntegerLiteral" value="900">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </maximum>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.2/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <endToEndFlow href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.2"/>
+  </endToEndFlow>
+  <endToEndFlow name="GreenTechGrazers_System4_flow" flowElement="//@componentInstance.2/@flowSpecification.0 //@connectionInstance.11 //@componentInstance.10/@componentInstance.1/@flowSpecification.0 //@componentInstance.10/@connectionInstance.0 //@componentInstance.10/@componentInstance.8/@flowSpecification.1 //@connectionInstance.20 //@componentInstance.8/@flowSpecification.0">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Latency"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RangeValue">
+          <minimum xsi:type="aadl2:IntegerLiteral" value="700">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </minimum>
+          <maximum xsi:type="aadl2:IntegerLiteral" value="900">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </maximum>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.3/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <endToEndFlow href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.3"/>
+  </endToEndFlow>
+  <endToEndFlow name="GreenTechGrazers_System5_flow" flowElement="//@componentInstance.6/@flowSpecification.0 //@connectionInstance.15 //@componentInstance.10/@componentInstance.4/@flowSpecification.0 //@componentInstance.10/@connectionInstance.2 //@componentInstance.10/@componentInstance.8/@flowSpecification.4 //@connectionInstance.21 //@componentInstance.9/@flowSpecification.0">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Latency"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RangeValue">
+          <minimum xsi:type="aadl2:IntegerLiteral" value="700">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </minimum>
+          <maximum xsi:type="aadl2:IntegerLiteral" value="900">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </maximum>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.4/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <endToEndFlow href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.4"/>
+  </endToEndFlow>
+  <endToEndFlow name="GreenTechGrazers_System6_flow" flowElement="//@componentInstance.6/@flowSpecification.0 //@connectionInstance.15 //@componentInstance.10/@componentInstance.4/@flowSpecification.0 //@componentInstance.10/@connectionInstance.2 //@componentInstance.10/@componentInstance.8/@flowSpecification.5 //@connectionInstance.20 //@componentInstance.8/@flowSpecification.0">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Latency"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RangeValue">
+          <minimum xsi:type="aadl2:IntegerLiteral" value="700">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </minimum>
+          <maximum xsi:type="aadl2:IntegerLiteral" value="900">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </maximum>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.5/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <endToEndFlow href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.5"/>
+  </endToEndFlow>
+  <endToEndFlow name="GreenTechGrazers_System7_flow" flowElement="//@componentInstance.7/@flowSpecification.0 //@connectionInstance.16 //@componentInstance.10/@componentInstance.5/@flowSpecification.0 //@componentInstance.10/@connectionInstance.3 //@componentInstance.10/@componentInstance.8/@flowSpecification.6 //@connectionInstance.21 //@componentInstance.9/@flowSpecification.0">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Latency"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RangeValue">
+          <minimum xsi:type="aadl2:IntegerLiteral" value="700">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </minimum>
+          <maximum xsi:type="aadl2:IntegerLiteral" value="900">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </maximum>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.6/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <endToEndFlow href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.6"/>
+  </endToEndFlow>
+  <endToEndFlow name="GreenTechGrazers_System8_flow" flowElement="//@componentInstance.7/@flowSpecification.0 //@connectionInstance.16 //@componentInstance.10/@componentInstance.5/@flowSpecification.0 //@componentInstance.10/@connectionInstance.3 //@componentInstance.10/@componentInstance.8/@flowSpecification.7 //@connectionInstance.20 //@componentInstance.8/@flowSpecification.0">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Latency"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RangeValue">
+          <minimum xsi:type="aadl2:IntegerLiteral" value="700">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </minimum>
+          <maximum xsi:type="aadl2:IntegerLiteral" value="900">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </maximum>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.7/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <endToEndFlow href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedEndToEndFlow.7"/>
+  </endToEndFlow>
+  <connectionInstance name="this_bus -> this_RFIDReader.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.1/@featureInstance.2" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.1/@featureInstance.2">
+      <connection xsi:type="aadl2:AccessConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_bus -> this_RFIDTags.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.2/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.2/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_bus -> this_nippledrinkersWithRFID.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.3/@featureInstance.2" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.3/@featureInstance.2">
+      <connection xsi:type="aadl2:AccessConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_bus -> this_motion_sensor.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.4/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.4/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_bus -> this_camera.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.5/@featureInstance.2" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.5/@featureInstance.2">
+      <connection xsi:type="aadl2:AccessConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_bus -> this_temperatureSensor.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.6/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.6/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_bus -> this_gasSensor.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.7/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.7/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_bus -> this_gateway.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.8/@featureInstance.2" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.8/@featureInstance.2">
+      <connection xsi:type="aadl2:AccessConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.7"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_bus -> this_user_device.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.9/@featureInstance.2" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.9/@featureInstance.2">
+      <connection xsi:type="aadl2:AccessConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.8"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_bus -> this_processor.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.11/@featureInstance.0" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.11/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.9"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_RFIDReader.transmitted_data -> this_Controller.this_thread_RFIDReader.RFID_reader_in" complete="true" kind="portConnection" destination="//@componentInstance.10/@componentInstance.0/@featureInstance.0" source="//@componentInstance.1/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.1/@featureInstance.0" destination="//@componentInstance.10/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@featureInstance.0" destination="//@componentInstance.10/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_RFIDTags.tags_data_detected -> this_Controller.this_thread_Tags.RFID_tags_in" complete="true" kind="portConnection" destination="//@componentInstance.10/@componentInstance.1/@featureInstance.0" source="//@componentInstance.2/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.2/@featureInstance.0" destination="//@componentInstance.10/@featureInstance.5">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.2"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@featureInstance.5" destination="//@componentInstance.10/@componentInstance.1/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_nippledrinkersWithRFID.nippledrinks_data_transmitted_out -> this_Controller.this_thread_nippledrinkersWithRFID.nippledrinks_data_in" complete="true" kind="portConnection" destination="//@componentInstance.10/@componentInstance.2/@featureInstance.0" source="//@componentInstance.3/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.3/@featureInstance.0" destination="//@componentInstance.10/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.4"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@featureInstance.1" destination="//@componentInstance.10/@componentInstance.2/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_motion_sensor.motion_detected -> this_Controller.this_thread_motion.motion_in" complete="true" kind="portConnection" destination="//@componentInstance.10/@componentInstance.3/@featureInstance.0" source="//@componentInstance.4/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.4/@featureInstance.0" destination="//@componentInstance.10/@featureInstance.7">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.5"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@featureInstance.7" destination="//@componentInstance.10/@componentInstance.3/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_camera.video_stream -> this_Controller.this_thread_ProcessVideo.video_in" complete="true" kind="portConnection" destination="//@componentInstance.10/@componentInstance.6/@featureInstance.0" source="//@componentInstance.5/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.5/@featureInstance.0" destination="//@componentInstance.10/@featureInstance.2">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.7"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@featureInstance.2" destination="//@componentInstance.10/@componentInstance.6/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.13"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_temperatureSensor.Temperature_detected -> this_Controller.this_thread_temperature.temperature_in" complete="true" kind="portConnection" destination="//@componentInstance.10/@componentInstance.4/@featureInstance.0" source="//@componentInstance.6/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.6/@featureInstance.0" destination="//@componentInstance.10/@featureInstance.9">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.8"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@featureInstance.9" destination="//@componentInstance.10/@componentInstance.4/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.8"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_gasSensor.gas_detected -> this_Controller.this_thread_gas.gas_in" complete="true" kind="portConnection" destination="//@componentInstance.10/@componentInstance.5/@featureInstance.0" source="//@componentInstance.7/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.7/@featureInstance.0" destination="//@componentInstance.10/@featureInstance.10">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.9"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@featureInstance.10" destination="//@componentInstance.10/@componentInstance.5/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.10"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_user_device.Farming_data -> this_Controller.this_thread_user_device.Farming_in" complete="true" kind="portConnection" destination="//@componentInstance.10/@componentInstance.7/@featureInstance.0" source="//@componentInstance.9/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.9/@featureInstance.0" destination="//@componentInstance.10/@featureInstance.3">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.12"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@featureInstance.3" destination="//@componentInstance.10/@componentInstance.7/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.15"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_Controller.this_thread_control.RFID_reader_data_out -> this_RFIDReader.received_Data_Event" complete="true" kind="portConnection" destination="//@componentInstance.1/@featureInstance.1" source="//@componentInstance.10/@componentInstance.8/@featureInstance.0">
+    <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@componentInstance.8/@featureInstance.0" destination="//@componentInstance.10/@featureInstance.4">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.10/@featureInstance.4" destination="//@componentInstance.1/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_Controller.this_thread_control.camera_out -> this_camera.camera_control" complete="true" kind="portConnection" destination="//@componentInstance.5/@featureInstance.1" source="//@componentInstance.10/@componentInstance.8/@featureInstance.3">
+    <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@componentInstance.8/@featureInstance.3" destination="//@componentInstance.10/@featureInstance.8">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.12"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.10/@featureInstance.8" destination="//@componentInstance.5/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_Controller.this_thread_control.gateway_data_out -> this_gateway.incoming_data_received" complete="true" kind="portConnection" destination="//@componentInstance.8/@featureInstance.1" source="//@componentInstance.10/@componentInstance.8/@featureInstance.4">
+    <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@componentInstance.8/@featureInstance.4" destination="//@componentInstance.10/@featureInstance.11">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.14"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.10/@featureInstance.11" destination="//@componentInstance.8/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.10"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_Controller.this_thread_control.user_device_out -> this_user_device.user_Device_on_off" complete="true" kind="portConnection" destination="//@componentInstance.9/@featureInstance.1" source="//@componentInstance.10/@componentInstance.8/@featureInstance.5">
+    <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@componentInstance.8/@featureInstance.5" destination="//@componentInstance.10/@featureInstance.12">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.16"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.10/@featureInstance.12" destination="//@componentInstance.9/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.11"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_Controller.this_thread_control.nippledrinks_data_out -> this_nippledrinkersWithRFID.nippledrinks_data_in" complete="true" kind="portConnection" destination="//@componentInstance.3/@featureInstance.1" source="//@componentInstance.10/@componentInstance.8/@featureInstance.8">
+    <connectionReference context="//@componentInstance.10" source="//@componentInstance.10/@componentInstance.8/@featureInstance.8" destination="//@componentInstance.10/@featureInstance.6">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.5"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.10/@featureInstance.6" destination="//@componentInstance.3/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../GTGS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <systemOperationMode name="No Modes"/>
+  <componentImplementation xsi:type="aadl2:SystemImplementation" href="../GTGS.aadl#GTGS.GreenTechGrazers_System.with_Devices"/>
+</instance:SystemInstance>

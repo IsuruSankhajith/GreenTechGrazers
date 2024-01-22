@@ -1,0 +1,6 @@
+Model statistics Report
+
+GreenTechGrazers_System_with_Devices_Instance: Model Statistics: 60 component type declarations, 55 component implementation declarations, 0 data type declarations.  
+GreenTechGrazers_System_with_Devices_Instance: Flow Statistics: 43 flow specifications, 10 end-to-end flows.  
+GreenTechGrazers_System_with_Devices_Instance: Application statistics: 9 threads, 1 processes, 27 semantic connections, 8 end-to-end flow instances.  
+GreenTechGrazers_System_with_Devices_Instance: Execution platform statistics: 1 processors, 0 virtual processors, 1 memory units, 1 buses, 0 virtual buses, 9 devices.  

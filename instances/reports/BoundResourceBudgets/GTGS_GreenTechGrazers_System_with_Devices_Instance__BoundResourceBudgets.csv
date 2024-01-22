@@ -1,0 +1,12 @@
+Bound Resource Budget Analysis Report
+
+ERROR:  this_thread_RFIDReader: Thread instance this_Controller.this_thread_RFIDReader has execution time, but no Reference_Processor. Please this property.
+ERROR:  this_thread_Tags: Thread instance this_Controller.this_thread_Tags has execution time, but no Reference_Processor. Please this property.
+ERROR:  this_thread_nippledrinkersWithRFID: Thread instance this_Controller.this_thread_nippledrinkersWithRFID has execution time, but no Reference_Processor. Please this property.
+ERROR:  this_thread_motion: Thread instance this_Controller.this_thread_motion has execution time, but no Reference_Processor. Please this property.
+ERROR:  this_thread_temperature: Thread instance this_Controller.this_thread_temperature has execution time, but no Reference_Processor. Please this property.
+ERROR:  this_thread_gas: Thread instance this_Controller.this_thread_gas has execution time, but no Reference_Processor. Please this property.
+ERROR:  this_thread_ProcessVideo: Thread instance this_Controller.this_thread_ProcessVideo has execution time, but no Reference_Processor. Please this property.
+ERROR:  this_thread_gateway: Thread instance this_Controller.this_thread_gateway has execution time, but no Reference_Processor. Please this property.
+ERROR:  this_thread_user_device: Thread instance this_Controller.this_thread_user_device has execution time, but no Reference_Processor. Please this property.
+ERROR:  this_thread_control: Thread instance this_Controller.this_thread_control has execution time, but no Reference_Processor. Please this property.
